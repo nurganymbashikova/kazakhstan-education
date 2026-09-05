@@ -6,46 +6,89 @@
 
     <title>카자흐스탄의 학교 교육 시스템</title>
 
-    <!-- Reveal.js -->
+    <!-- =========================
+         REVEAL.JS
+         ========================= -->
+
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css"
     >
-<link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&display=swap"
-    rel="stylesheet"
->
+
+
+    <!-- =========================
+         KOREAN FONT
+         ========================= -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet"
+    >
+
+
     <style>
-/* =========================
-   COLOR PALETTE
-   ========================= */
 
-:root {
-    --ivory: #D8D8CD;
-    --tan: #CBAB76;
-    --medium-brown: #886344;
-    --dark-brown: #623B23;
-    --deep-brown: #3C271B;
-}
+        /* ==================================================
+           1. COLOR PALETTE
+           ================================================== */
 
-        /* =========================
-           BASIC PAGE SETTINGS
-           ========================= */
-
-        body {
-            margin: 0;
-            font-family: "Noto Serif KR", serif;
-            background: #eee9df;
-            color: #252525;
+        :root {
+            --ivory: #D8D8CD;
+            --light-brown: #CBAB76;
+            --medium-brown: #886344;
+            --dark-brown: #623B23;
+            --deep-brown: #3C271B;
+            --paper: #F3F1E8;
         }
 
 
-        /* =========================
-           SLIDE SETTINGS
-           ========================= */
+        /* ==================================================
+           2. BASIC SETTINGS
+           ================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+            background: var(--ivory);
+
+            color: var(--deep-brown);
+
+            font-family:
+                "Noto Serif KR",
+                serif;
+        }
+
+
+        /* ==================================================
+           3. REVEAL.JS
+           ================================================== */
+
+        .reveal {
+            font-family:
+                "Noto Serif KR",
+                serif;
+
+            color: var(--deep-brown);
+        }
+
+        .reveal .slides {
+            text-align: left;
+        }
+
+
+        /* ==================================================
+           4. GENERAL SLIDE
+           ================================================== */
 
         .slide {
-            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+
+            padding: 70px 80px;
 
             display: flex;
             flex-direction: column;
@@ -53,307 +96,515 @@
             justify-content: center;
             align-items: flex-start;
 
-            text-align: left;
-
-            padding: 55px 70px;
+            background: var(--ivory);
         }
 
 
-        /* =========================
-           TEXT
-           ========================= */
+        /* ==================================================
+           5. TYPOGRAPHY
+           ================================================== */
 
         h1 {
-            font-size: 64px;
-            max-width: 1000px;
-
-            margin: 0 0 20px 0;
-
-            line-height: 1.05;
-        }
-h1 {
-    color: var(--deep-brown);
-}
-
-.slide-label {
-    color: var(--medium-brown);
-}
-
-.card-number {
-    color: var(--dark-brown);
-}
-
-.years {
-    color: var(--dark-brown);
-}
-
-.terms {
-    background: var(--medium-brown);
-    color: #F3F1E8;
-}
-        p {
-            font-size: 26px;
             margin: 0;
+
+            color: var(--deep-brown);
+
+            font-size: 62px;
+
+            font-weight: 700;
+
+            line-height: 1.15;
+
+            letter-spacing: -2px;
+        }
+
+        h2 {
+            color: var(--deep-brown);
+        }
+
+        p {
+            margin: 0;
+
+            font-size: 22px;
+
+            line-height: 1.7;
         }
 
         .slide-label {
-            font-size: 14px;
-            letter-spacing: 3px;
+            margin-bottom: 20px;
+
+            color: var(--medium-brown);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
 
             font-weight: bold;
 
-            margin-bottom: 18px;
-
-            opacity: 0.55;
+            letter-spacing: 3px;
         }
 
         .intro {
-            font-size: 20px;
+            margin-top: 20px;
 
-            margin-top: 0;
+            color: var(--medium-brown);
 
-            opacity: 0.65;
+            font-size: 19px;
+
+            line-height: 1.7;
         }
 
 
-        /* =========================
-           EDUCATION CARDS
-           ========================= */
+        /* ==================================================
+           6. SMALL PAGE NUMBER
+           ================================================== */
+
+        .reveal .slide-number {
+            right: 30px;
+            bottom: 20px;
+
+            background: transparent;
+
+            color: var(--medium-brown);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+        }
+
+
+        /* ==================================================
+           7. TITLE SLIDE
+           ================================================== */
+
+        .title-slide {
+            position: relative;
+
+            justify-content: flex-end;
+
+            padding-bottom: 90px;
+        }
+
+        .title-slide h1 {
+            max-width: 900px;
+
+            font-size: 76px;
+
+            line-height: 1.08;
+        }
+
+        .title-subtitle {
+            margin-top: 25px;
+
+            color: var(--medium-brown);
+
+            font-size: 24px;
+        }
+
+        .title-line {
+            width: 90px;
+
+            height: 4px;
+
+            margin-top: 35px;
+
+            background: var(--dark-brown);
+        }
+
+
+        /* ==================================================
+           8. EDUCATION STRUCTURE
+           
+           This is the ONLY slide using cards.
+           ================================================== */
 
         .cards {
             display: flex;
 
-            gap: 20px;
-
             width: 100%;
 
-            margin-top: 30px;
+            gap: 20px;
+
+            margin-top: 40px;
         }
 
         .card {
-    flex: 1;
+            flex: 1;
 
-    min-height: 220px;
+            min-height: 220px;
 
-    padding: 25px;
+            padding: 28px;
 
-    border-radius: 22px;
+            background: var(--paper);
 
-    box-sizing: border-box;
-
-    text-align: left;
-
-    background: #F3F1E8;
-
-    border: 1px solid rgba(60, 39, 27, 0.15);
-
-    box-shadow:
-        0 12px 30px rgba(60, 39, 27, 0.10);
-
-    transition: transform 0.3s ease;
-}
-        .card:hover {
-            transform: translateY(-6px);
+            border: 1px solid rgba(60, 39, 27, 0.15);
         }
 
         .card-number {
-            font-size: 14px;
+            color: var(--medium-brown);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
 
             letter-spacing: 2px;
-
-            opacity: 0.5;
         }
 
         .card h2 {
+            margin: 42px 0 8px 0;
+
             font-size: 29px;
 
-            margin: 35px 0 8px 0;
+            font-weight: 600;
         }
 
         .card p {
-            font-size: 18px;
+            color: var(--medium-brown);
 
-            margin: 0;
-
-            opacity: 0.6;
+            font-size: 17px;
         }
 
         .years {
-            font-size: 36px;
+            margin-top: 20px;
+
+            color: var(--dark-brown);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 34px;
 
             font-weight: bold;
-
-            margin-top: 25px;
         }
 
 
-        /* =========================
-           TERMS
-           ========================= */
+        /* ==================================================
+           9. PRESCHOOL SLIDE
+           ================================================== */
 
-        .terms {
-            margin-top: 22px;
+        .preschool-content {
+            display: flex;
 
-            padding: 14px 20px;
+            width: 100%;
 
-            border-radius: 14px;
+            gap: 80px;
 
-            background: rgba(255, 255, 255, 0.7);
+            margin-top: 35px;
+        }
+
+        .preschool-main {
+            flex: 1;
+        }
+
+        .preschool-age {
+            margin-bottom: 25px;
+
+            color: var(--dark-brown);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 52px;
+
+            font-weight: bold;
+        }
+
+        .preschool-text {
+            max-width: 650px;
+
+            font-size: 21px;
+
+            line-height: 1.8;
+        }
+
+        .preschool-note {
+            flex: 0.7;
+
+            padding-left: 35px;
+
+            border-left: 2px solid var(--light-brown);
+        }
+
+        .preschool-note h2 {
+            margin: 0 0 15px 0;
+
+            font-size: 25px;
+        }
+
+        .preschool-note p {
+            color: var(--medium-brown);
+
+            font-size: 18px;
+        }
+
+
+        /* ==================================================
+           10. FOUR TERMS
+           ================================================== */
+
+        .terms-timeline {
+            display: flex;
+
+            align-items: center;
+
+            width: 100%;
+
+            margin-top: 70px;
+        }
+
+        .term {
+            flex: 1;
+
+            position: relative;
+
+            padding-right: 25px;
+        }
+
+        .term-number {
+            color: var(--medium-brown);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 14px;
+
+            letter-spacing: 2px;
+        }
+
+        .term h2 {
+            margin: 12px 0 8px 0;
+
+            font-size: 30px;
+
+            font-weight: 600;
+        }
+
+        .term p {
+            color: var(--medium-brown);
+
+            font-size: 17px;
+        }
+
+        .term-line {
+            width: 100%;
+
+            height: 2px;
+
+            margin-top: 25px;
+
+            background: var(--light-brown);
+        }
+
+
+        /* ==================================================
+           11. HOLIDAYS
+           ================================================== */
+
+        .holiday-list {
+            width: 100%;
+
+            margin-top: 45px;
+        }
+
+        .holiday-row {
+            display: grid;
+
+            grid-template-columns: 180px 1fr 180px;
+
+            align-items: center;
+
+            padding: 18px 0;
+
+            border-bottom: 1px solid rgba(60, 39, 27, 0.2);
+        }
+
+        .holiday-name {
+            font-size: 23px;
+
+            font-weight: 600;
+        }
+
+        .holiday-date {
+            color: var(--medium-brown);
+
+            font-family: Arial, sans-serif;
 
             font-size: 16px;
         }
 
-        .terms span {
-            opacity: 0.55;
+        .holiday-days {
+            color: var(--dark-brown);
 
-            margin-right: 15px;
+            font-family: Arial, sans-serif;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            text-align: right;
         }
 
-        .terms strong {
-            font-weight: 600;
-        }
-
-
-        /* =========================
-           HOLIDAY TIMELINE
-           ========================= */
-
-        .holiday-timeline {
+        .summer-holiday {
             display: flex;
 
-            align-items: stretch;
+            align-items: center;
 
-            gap: 14px;
+            justify-content: space-between;
 
             width: 100%;
 
-            margin-top: 28px;
+            margin-top: 35px;
+
+            padding-top: 30px;
+
+            border-top: 3px solid var(--dark-brown);
         }
 
-        .holiday-box {
-    flex: 1;
+        .summer-title {
+            font-size: 30px;
 
-    min-height: 145px;
-
-    padding: 20px;
-
-    border-radius: 20px;
-
-    box-sizing: border-box;
-
-    background: #F3F1E8;
-
-    border: 1px solid rgba(60, 39, 27, 0.15);
-
-    box-shadow:
-        0 10px 25px rgba(60, 39, 27, 0.08);
-}
-
-        .holiday-box h2 {
-            font-size: 22px;
-
-            margin: 0 0 12px 0;
+            font-weight: 600;
         }
 
-        .holiday-box .date {
-            font-size: 15px;
+        .summer-date {
+            color: var(--medium-brown);
 
-            margin-bottom: 10px;
-
-            opacity: 0.6;
-        }
-
-        .holiday-box .duration {
-            font-size: 26px;
-
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           SUMMER HOLIDAY
-           ========================= */
-
-        .summer {
-    width: 100%;
-
-    margin-top: 18px;
-
-    padding: 22px 28px;
-
-    border-radius: 22px;
-
-    box-sizing: border-box;
-
-    background: var(--tan);
-
-    color: var(--deep-brown);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-        .summer h2 {
-            margin: 0 0 7px 0;
-
-            font-size: 29px;
-        }
-
-        .summer p {
             font-size: 18px;
-
-            opacity: 0.65;
         }
 
         .summer-duration {
+            color: var(--dark-brown);
+
+            font-family: Arial, sans-serif;
+
             font-size: 38px;
 
             font-weight: bold;
         }
 
 
-        /* =========================
-           FIRST GRADE EXTRA HOLIDAY
-           ========================= */
+        /* ==================================================
+           12. SCHOOL PERIOD SLIDES
+           ================================================== */
 
-        .extra-holiday {
+        .period-layout {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
             width: 100%;
 
-            margin-top: 15px;
+            gap: 80px;
 
-            padding: 12px 18px;
+            margin-top: 50px;
+        }
 
-            box-sizing: border-box;
+        .big-number {
+            color: var(--dark-brown);
 
-            border-radius: 14px;
+            font-family: Arial, sans-serif;
 
-            background: rgba(255, 255, 255, 0.65);
+            font-size: 110px;
 
-            font-size: 15px;
+            font-weight: bold;
 
-            opacity: 0.8;
+            line-height: 0.9;
+        }
+
+        .period-name {
+            margin-top: 25px;
+
+            font-size: 38px;
+
+            font-weight: 600;
+        }
+
+        .period-age {
+            margin-top: 35px;
+
+            color: var(--medium-brown);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 25px;
+        }
+
+        .period-description {
+            align-self: center;
+
+            padding-left: 35px;
+
+            border-left: 2px solid var(--light-brown);
+
+            color: var(--medium-brown);
+
+            font-size: 20px;
+
+            line-height: 1.9;
         }
 
 
-        /* =========================
-           RESPONSIVE DESIGN
-           ========================= */
+        /* ==================================================
+           13. SUMMARY
+           ================================================== */
+
+        .summary-list {
+            width: 100%;
+
+            margin-top: 45px;
+        }
+
+        .summary-item {
+            display: flex;
+
+            align-items: baseline;
+
+            gap: 30px;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid rgba(60, 39, 27, 0.2);
+        }
+
+        .summary-number {
+            color: var(--light-brown);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 18px;
+
+            font-weight: bold;
+        }
+
+        .summary-item strong {
+            min-width: 180px;
+
+            font-size: 23px;
+        }
+
+        .summary-item span {
+            color: var(--medium-brown);
+
+            font-size: 18px;
+        }
+
+
+        /* ==================================================
+           14. RESPONSIVE
+           ================================================== */
 
         @media (max-width: 900px) {
 
             .slide {
-                padding: 40px;
+                padding: 45px;
             }
 
             h1 {
-                font-size: 48px;
+                font-size: 46px;
             }
 
-            .cards,
-            .holiday-timeline {
+            .title-slide h1 {
+                font-size: 55px;
+            }
+
+            .cards {
                 gap: 12px;
             }
 
@@ -362,11 +613,16 @@ h1 {
             }
 
             .card h2 {
-                font-size: 23px;
+                font-size: 22px;
             }
 
-            .years {
-                font-size: 30px;
+            .preschool-content,
+            .period-layout {
+                gap: 35px;
+            }
+
+            .big-number {
+                font-size: 80px;
             }
 
         }
@@ -383,11 +639,11 @@ h1 {
     <div class="slides">
 
 
-        <!-- =========================
+        <!-- ==================================================
              SLIDE 1 — TITLE
-             ========================= -->
+             ================================================== -->
 
-        <section class="slide">
+        <section class="slide title-slide">
 
             <div class="slide-label">
                 KAZAKHSTAN / EDUCATION
@@ -398,37 +654,310 @@ h1 {
                 학교 교육 시스템
             </h1>
 
-            <p>
+            <p class="title-subtitle">
                 초등학교부터 고등학교까지
             </p>
+
+            <div class="title-line"></div>
 
         </section>
 
 
 
-        <!-- =========================
-             SLIDE 2 — EDUCATION STRUCTURE
-             ========================= -->
+        <!-- ==================================================
+             SLIDE 2 — PRESCHOOL
+             ================================================== -->
 
         <section class="slide">
 
             <div class="slide-label">
-                02 / EDUCATION STRUCTURE
+                02 / PRESCHOOL
             </div>
 
             <h1>
-                학교 교육의 구조
+                학교에 들어가기 전
+            </h1>
+
+            <div class="preschool-content">
+
+                <div class="preschool-main">
+
+                    <div class="preschool-age">
+                        약 5–6세
+                    </div>
+
+                    <p class="preschool-text">
+                        초등학교 1학년에 입학하기 전에
+                        취학 전 교육을 받을 수 있습니다.
+                        유치원은 의무교육은 아니지만,
+                        많은 부모들이 자녀를 유치원에 보냅니다.
+                    </p>
+
+                </div>
+
+
+                <div class="preschool-note">
+
+                    <h2>
+                        취학 전 교육
+                    </h2>
+
+                    <p>
+                        일반적으로 학교 입학 전
+                        약 1년 동안 학교생활을 준비합니다.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             SLIDE 3 — FOUR TERMS
+             ================================================== -->
+
+        <section class="slide">
+
+            <div class="slide-label">
+                03 / SCHOOL YEAR
+            </div>
+
+            <h1>
+                한 학년은 4개의 학기로 나뉩니다
             </h1>
 
             <p class="intro">
-                카자흐스탄의 학교 교육은 학년과 교육 단계에 따라 구성됩니다.
+                각 학기 사이에는 방학이 있습니다.
+            </p>
+
+
+            <div class="terms-timeline">
+
+
+                <div class="term">
+
+                    <div class="term-number">
+                        01
+                    </div>
+
+                    <h2>
+                        1학기
+                    </h2>
+
+                    <p>
+                        학년 초
+                    </p>
+
+                    <div class="term-line"></div>
+
+                </div>
+
+
+                <div class="term">
+
+                    <div class="term-number">
+                        02
+                    </div>
+
+                    <h2>
+                        2학기
+                    </h2>
+
+                    <p>
+                        가을 이후
+                    </p>
+
+                    <div class="term-line"></div>
+
+                </div>
+
+
+                <div class="term">
+
+                    <div class="term-number">
+                        03
+                    </div>
+
+                    <h2>
+                        3학기
+                    </h2>
+
+                    <p>
+                        겨울 이후
+                    </p>
+
+                    <div class="term-line"></div>
+
+                </div>
+
+
+                <div class="term">
+
+                    <div class="term-number">
+                        04
+                    </div>
+
+                    <h2>
+                        4학기
+                    </h2>
+
+                    <p>
+                        학년 마지막
+                    </p>
+
+                    <div class="term-line"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             SLIDE 4 — HOLIDAYS
+             ================================================== -->
+
+        <section class="slide">
+
+            <div class="slide-label">
+                04 / SCHOOL HOLIDAYS
+            </div>
+
+            <h1>
+                학기 사이의 방학
+            </h1>
+
+            <p class="intro">
+                2026–2027 학년도 기준
+            </p>
+
+
+            <div class="holiday-list">
+
+
+                <div class="holiday-row">
+
+                    <div class="holiday-name">
+                        가을 방학
+                    </div>
+
+                    <div class="holiday-date">
+                        2026.10.26 – 11.01
+                    </div>
+
+                    <div class="holiday-days">
+                        7일
+                    </div>
+
+                </div>
+
+
+                <div class="holiday-row">
+
+                    <div class="holiday-name">
+                        겨울 방학
+                    </div>
+
+                    <div class="holiday-date">
+                        2026.12.28 – 2027.01.10
+                    </div>
+
+                    <div class="holiday-days">
+                        14일
+                    </div>
+
+                </div>
+
+
+                <div class="holiday-row">
+
+                    <div class="holiday-name">
+                        봄 방학
+                    </div>
+
+                    <div class="holiday-date">
+                        2027.03.22 – 03.28
+                    </div>
+
+                    <div class="holiday-days">
+                        7일
+                    </div>
+
+                </div>
+
+
+                <div class="holiday-row">
+
+                    <div class="holiday-name">
+                        1학년 추가 방학
+                    </div>
+
+                    <div class="holiday-date">
+                        2027.02.08 – 02.14
+                    </div>
+
+                    <div class="holiday-days">
+                        7일
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="summer-holiday">
+
+                <div>
+
+                    <div class="summer-title">
+                        여름 방학
+                    </div>
+
+                    <div class="summer-date">
+                        학년 종료 후
+                    </div>
+
+                </div>
+
+                <div class="summer-duration">
+                    약 3개월
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             SLIDE 5 — EDUCATION STRUCTURE
+             
+             ONLY SLIDE WITH CARDS
+             ================================================== -->
+
+        <section class="slide">
+
+            <div class="slide-label">
+                05 / EDUCATION STRUCTURE
+            </div>
+
+            <h1>
+                학교 교육의 세 단계
+            </h1>
+
+            <p class="intro">
+                학교 교육은 크게 세 단계로 나눌 수 있습니다.
             </p>
 
 
             <div class="cards">
 
-
-                <!-- PRIMARY -->
 
                 <div class="card">
 
@@ -451,8 +980,6 @@ h1 {
                 </div>
 
 
-                <!-- MIDDLE -->
-
                 <div class="card">
 
                     <div class="card-number">
@@ -474,8 +1001,6 @@ h1 {
                 </div>
 
 
-                <!-- HIGH -->
-
                 <div class="card">
 
                     <div class="card-number">
@@ -496,18 +1021,6 @@ h1 {
 
                 </div>
 
-            </div>
-
-
-            <div class="terms">
-
-                <span>
-                    학년 운영
-                </span>
-
-                <strong>
-                    연간 4개 학기
-                </strong>
 
             </div>
 
@@ -515,235 +1028,255 @@ h1 {
 
 
 
-        <!-- =========================
-             SLIDE 3 — FOUR TERMS
-             ========================= -->
+        <!-- ==================================================
+             SLIDE 6 — PRIMARY SCHOOL
+             ================================================== -->
 
         <section class="slide">
 
             <div class="slide-label">
-                03 / SCHOOL YEAR
+                06 / PRIMARY SCHOOL
             </div>
 
             <h1>
-                1년은 4개의 학기로 구성
+                초등학교
             </h1>
 
-            <p class="intro">
-                학생들은 한 학년을 네 개의 학기로 나누어 공부합니다.
-            </p>
 
-
-            <div class="cards">
-
-
-                <div class="card">
-
-                    <div class="card-number">
-                        01
-                    </div>
-
-                    <h2>
-                        1학기
-                    </h2>
-
-                    <p>
-                        학년 초
-                    </p>
-
-                    <div class="years">
-                        1분기
-                    </div>
-
-                </div>
-
-
-                <div class="card">
-
-                    <div class="card-number">
-                        02
-                    </div>
-
-                    <h2>
-                        2학기
-                    </h2>
-
-                    <p>
-                        가을 이후
-                    </p>
-
-                    <div class="years">
-                        2분기
-                    </div>
-
-                </div>
-
-
-                <div class="card">
-
-                    <div class="card-number">
-                        03
-                    </div>
-
-                    <h2>
-                        3학기
-                    </h2>
-
-                    <p>
-                        겨울 이후
-                    </p>
-
-                    <div class="years">
-                        3분기
-                    </div>
-
-                </div>
-
-
-                <div class="card">
-
-                    <div class="card-number">
-                        04
-                    </div>
-
-                    <h2>
-                        4학기
-                    </h2>
-
-                    <p>
-                        학년 마지막
-                    </p>
-
-                    <div class="years">
-                        4분기
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             SLIDE 4 — SCHOOL HOLIDAYS
-             ========================= -->
-
-        <section class="slide">
-
-            <div class="slide-label">
-                04 / SCHOOL HOLIDAYS
-            </div>
-
-            <h1>
-                학기 사이 방학
-            </h1>
-
-            <p class="intro">
-                2026–2027 학년도 기준
-            </p>
-
-
-            <div class="holiday-timeline">
-
-
-                <!-- AUTUMN -->
-
-                <div class="holiday-box">
-
-                    <h2>
-                        가을 방학
-                    </h2>
-
-                    <div class="date">
-                        2026.10.26 – 11.01
-                    </div>
-
-                    <div class="duration">
-                        7일
-                    </div>
-
-                </div>
-
-
-                <!-- WINTER -->
-
-                <div class="holiday-box">
-
-                    <h2>
-                        겨울 방학
-                    </h2>
-
-                    <div class="date">
-                        2026.12.28 – 2027.01.10
-                    </div>
-
-                    <div class="duration">
-                        14일
-                    </div>
-
-                </div>
-
-
-                <!-- SPRING -->
-
-                <div class="holiday-box">
-
-                    <h2>
-                        봄 방학
-                    </h2>
-
-                    <div class="date">
-                        2027.03.22 – 03.28
-                    </div>
-
-                    <div class="duration">
-                        7일
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- SUMMER -->
-
-            <div class="summer">
+            <div class="period-layout">
 
                 <div>
 
-                    <h2>
-                        여름 방학
-                    </h2>
+                    <div class="big-number">
+                        1–4
+                    </div>
 
-                    <p>
-                        4학기가 끝난 후 시작되는 긴 방학
-                    </p>
+                    <div class="period-name">
+                        학년
+                    </div>
+
+                    <div class="period-age">
+                        약 6–10세
+                    </div>
 
                 </div>
 
-                <div class="summer-duration">
-                    약 3개월
+
+                <div class="period-description">
+
+                    초등학교에서는 학생들이
+                    읽기, 쓰기, 수학과 같은
+                    기본적인 학습 능력을 익힙니다.
+
+                    <br><br>
+
+                    학교생활의 기본적인 습관과
+                    학습 태도를 형성하는 시기입니다.
+
                 </div>
-
-            </div>
-
-
-            <!-- EXTRA HOLIDAY -->
-
-            <div class="extra-holiday">
-
-                <strong>
-                    1학년 추가 방학
-                </strong>
-
-                — 2027.02.08 – 02.14 / 7일
 
             </div>
 
         </section>
 
+
+
+        <!-- ==================================================
+             SLIDE 7 — MIDDLE SCHOOL
+             ================================================== -->
+
+        <section class="slide">
+
+            <div class="slide-label">
+                07 / MIDDLE SCHOOL
+            </div>
+
+            <h1>
+                중학교
+            </h1>
+
+
+            <div class="period-layout">
+
+                <div>
+
+                    <div class="big-number">
+                        5–9
+                    </div>
+
+                    <div class="period-name">
+                        학년
+                    </div>
+
+                    <div class="period-age">
+                        약 10–15세
+                    </div>
+
+                </div>
+
+
+                <div class="period-description">
+
+                    중학교에서는 학습 과목이
+                    더 다양해지고 내용도
+                    점차 심화됩니다.
+
+                    <br><br>
+
+                    학생들은 자신의 관심 분야를
+                    발견하고 이후의 교육을
+                    준비하기 시작합니다.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             SLIDE 8 — HIGH SCHOOL
+             ================================================== -->
+
+        <section class="slide">
+
+            <div class="slide-label">
+                08 / HIGH SCHOOL
+            </div>
+
+            <h1>
+                고등학교
+            </h1>
+
+
+            <div class="period-layout">
+
+                <div>
+
+                    <div class="big-number">
+                        10–11
+                    </div>
+
+                    <div class="period-name">
+                        학년
+                    </div>
+
+                    <div class="period-age">
+                        약 15–17세
+                    </div>
+
+                </div>
+
+
+                <div class="period-description">
+
+                    고등학교에서는 학생들이
+                    졸업 후의 진로와 대학 진학 등을
+                    준비합니다.
+
+                    <br><br>
+
+                    일부 교육 과정에서는
+                    12학년까지 이어질 수 있습니다.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             SLIDE 9 — SUMMARY
+             ================================================== -->
+
+        <section class="slide">
+
+            <div class="slide-label">
+                09 / SUMMARY
+            </div>
+
+            <h1>
+                한눈에 보는 교육 과정
+            </h1>
+
+
+            <div class="summary-list">
+
+
+                <div class="summary-item">
+
+                    <div class="summary-number">
+                        01
+                    </div>
+
+                    <strong>
+                        취학 전 교육
+                    </strong>
+
+                    <span>
+                        학교 입학 전 준비
+                    </span>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <div class="summary-number">
+                        02
+                    </div>
+
+                    <strong>
+                        초등학교
+                    </strong>
+
+                    <span>
+                        1–4학년
+                    </span>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <div class="summary-number">
+                        03
+                    </div>
+
+                    <strong>
+                        중학교
+                    </strong>
+
+                    <span>
+                        5–9학년
+                    </span>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <div class="summary-number">
+                        04
+                    </div>
+
+                    <strong>
+                        고등학교
+                    </strong>
+
+                    <span>
+                        10–11(12)학년
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
 
 
     </div>
@@ -752,7 +1285,9 @@ h1 {
 
 
 
-<!-- Reveal.js -->
+<!-- ==================================================
+     REVEAL.JS
+     ================================================== -->
 
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
 
@@ -768,7 +1303,9 @@ h1 {
 
         transition: "slide",
 
-        slideNumber: true
+        slideNumber: true,
+
+        center: false
 
     });
 
