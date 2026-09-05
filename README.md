@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>카자흐스탄의 학교 교육 시스템</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f1ea;
+        }
+
+        .slide {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="slide">
+        <h1>카자흐스탄의 학교 교육 시스템</h1>
+        <p>초등학교부터 고등학교까지</p>
+    </section>
+
+</body>
+</html>
