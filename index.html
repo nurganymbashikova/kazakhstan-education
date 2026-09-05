@@ -5,188 +5,383 @@
     <meta charset="UTF-8">
 
     <title>카자흐스탄의 학교 교육 시스템</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+
+    <!-- Reveal.js: presentation framework -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css"
+    >
+
     <style>
+
+        /* =========================
+           1. BASIC PAGE SETTINGS
+           ========================= */
+
         body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #eee9df;
-    color: #252525;
-}
+            margin: 0;
+            background: #f3efe7;
+            color: #242321;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* =========================
+           2. SLIDE SETTINGS
+           ========================= */
 
         .slide {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-    padding: 80px;
-    box-sizing: border-box;
-}
+            height: 100%;
+            padding: 70px;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            text-align: left;
+        }
+
+
+        /* =========================
+           3. TEXT
+           ========================= */
 
         h1 {
-    font-size: 72px;
-    max-width: 900px;
-    margin: 0 0 25px 0;
-    line-height: 1.05;
-}
+            margin: 0 0 20px 0;
+
+            font-size: 64px;
+            line-height: 1.1;
+            font-weight: 700;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 30px;
+        }
 
         p {
-    font-size: 28px;
-    margin: 0;
-}
-.slide-label {
-    font-size: 14px;
-    letter-spacing: 3px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    opacity: 0.55;
-}
+            margin: 0;
+        }
 
-.intro {
-    font-size: 20px;
-    margin-top: 0;
-    opacity: 0.65;
-}
+        .intro {
+            font-size: 20px;
+            line-height: 1.6;
+            opacity: 0.65;
+        }
 
-.cards {
-    display: flex;
-    gap: 24px;
-    width: 100%;
-    margin-top: 35px;
-}
 
-.card {
-    flex: 1;
-    min-height: 260px;
-    padding: 30px;
-    border-radius: 24px;
-    box-sizing: border-box;
-    text-align: left;
+        /* Small label above the title */
 
-    background: white;
+        .slide-label {
+            margin-bottom: 18px;
 
-    border: 1px solid rgba(0, 0, 0, 0.08);
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
 
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.08);
+            opacity: 0.45;
+        }
 
-    transition: transform 0.3s ease;
-}
 
-.card:hover {
-    transform: translateY(-8px);
-}
+        /* =========================
+           4. EDUCATION CARDS
+           ========================= */
 
-.card-number {
-    font-size: 14px;
-    letter-spacing: 2px;
-    opacity: 0.5;
-}
+        .cards {
+            display: flex;
+            gap: 24px;
 
-.card h2 {
-    font-size: 32px;
-    margin: 45px 0 10px 0;
-}
+            width: 100%;
+            margin-top: 40px;
+        }
 
-.card p {
-    font-size: 19px;
-    margin: 0;
-    opacity: 0.6;
-}
 
-.years {
-    font-size: 42px;
-    font-weight: bold;
-    margin-top: 30px;
-}
+        .card {
+            flex: 1;
 
-.terms {
-    margin-top: 30px;
-    padding: 16px 22px;
+            min-height: 270px;
+            padding: 30px;
 
-    border-radius: 14px;
+            box-sizing: border-box;
 
-    background: rgba(255, 255, 255, 0.7);
+            background: #ffffff;
+            border-radius: 24px;
 
-    font-size: 16px;
-}
+            border: 1px solid rgba(0, 0, 0, 0.06);
 
-.terms span {
-    opacity: 0.55;
-    margin-right: 15px;
-}
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.07);
 
-.terms strong {
-    font-weight: 600;
-}
+            transition: transform 0.3s ease;
+        }
+
+
+        /* Card moves slightly when mouse is over it */
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+
+        .card-number {
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+
+            opacity: 0.4;
+        }
+
+
+        .card h2 {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+
+        .card p {
+            font-size: 18px;
+            opacity: 0.55;
+        }
+
+
+        .years {
+            margin-top: 30px;
+
+            font-size: 42px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           5. FOUR TERMS
+           ========================= */
+
+        .terms {
+            width: 100%;
+            margin-top: 28px;
+
+            padding: 20px 24px;
+
+            box-sizing: border-box;
+
+            background: #e5ded2;
+            border-radius: 16px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .terms-label {
+            font-size: 15px;
+            opacity: 0.55;
+        }
+
+
+        .terms-value {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           6. RESPONSIVE DESIGN
+           ========================= */
+
+        @media (max-width: 900px) {
+
+            .slide {
+                padding: 40px;
+            }
+
+            h1 {
+                font-size: 45px;
+            }
+
+            .cards {
+                gap: 15px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .card h2 {
+                font-size: 24px;
+                margin-top: 30px;
+            }
+
+            .years {
+                font-size: 32px;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-<div class="reveal">
-    <div class="slides">
+    <!-- Reveal.js presentation container -->
 
-    <section class="slide">
+    <div class="reveal">
 
-        <h1>카자흐스탄의 학교 교육 시스템</h1>
+        <div class="slides">
 
-        <p>초등학교부터 고등학교까지</p>
 
-    </section>
-    
-<section class="slide">
+            <!-- =========================
+                 SLIDE 1 — TITLE
+                 ========================= -->
 
-    <div class="slide-label">01 / EDUCATION STRUCTURE</div>
+            <section class="slide">
 
-    <h1>학교 교육의 구조</h1>
+                <div class="slide-label">
+                    KAZAKHSTAN • EDUCATION
+                </div>
 
-    <p class="intro">
-        카자흐스탄의 학교 교육은 학년과 교육 단계에 따라 구성됩니다.
-    </p>
+                <h1>
+                    카자흐스탄의<br>
+                    학교 교육 시스템
+                </h1>
 
-    <div class="cards">
+                <p class="intro">
+                    초등학교부터 고등학교까지
+                </p>
 
-        <div class="card primary">
-            <div class="card-number">01</div>
-            <h2>초등학교</h2>
-            <p>1–4학년</p>
-            <div class="years">4년</div>
-        </div>
+            </section>
 
-        <div class="card middle">
-            <div class="card-number">02</div>
-            <h2>중학교</h2>
-            <p>5–9학년</p>
-            <div class="years">5년</div>
-        </div>
 
-        <div class="card high">
-            <div class="card-number">03</div>
-            <h2>고등학교</h2>
-            <p>10–11(12)학년</p>
-            <div class="years">2(3)년</div>
+            <!-- =========================
+                 SLIDE 2 — STRUCTURE
+                 ========================= -->
+
+            <section class="slide">
+
+                <div class="slide-label">
+                    01 / EDUCATION STRUCTURE
+                </div>
+
+                <h1>
+                    학교 교육의 구조
+                </h1>
+
+                <p class="intro">
+                    카자흐스탄의 학교 교육은 여러 교육 단계로 구성됩니다.
+                </p>
+
+
+                <!-- THREE EDUCATION CARDS -->
+
+                <div class="cards">
+
+
+                    <!-- PRIMARY SCHOOL -->
+
+                    <div class="card">
+
+                        <div class="card-number">
+                            01
+                        </div>
+
+                        <h2>
+                            초등학교
+                        </h2>
+
+                        <p>
+                            1–4학년
+                        </p>
+
+                        <div class="years">
+                            4년
+                        </div>
+
+                    </div>
+
+
+                    <!-- MIDDLE SCHOOL -->
+
+                    <div class="card">
+
+                        <div class="card-number">
+                            02
+                        </div>
+
+                        <h2>
+                            중학교
+                        </h2>
+
+                        <p>
+                            5–9학년
+                        </p>
+
+                        <div class="years">
+                            5년
+                        </div>
+
+                    </div>
+
+
+                    <!-- HIGH SCHOOL -->
+
+                    <div class="card">
+
+                        <div class="card-number">
+                            03
+                        </div>
+
+                        <h2>
+                            고등학교
+                        </h2>
+
+                        <p>
+                            10–11(12)학년
+                        </p>
+
+                        <div class="years">
+                            2(3)년
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOUR TERMS -->
+
+                <div class="terms">
+
+                    <span class="terms-label">
+                        학년 운영
+                    </span>
+
+                    <span class="terms-value">
+                        연간 4개 학기 (Terms)
+                    </span>
+
+                </div>
+
+            </section>
+
+
         </div>
 
     </div>
 
-    <div class="terms">
-        <span>학년 운영</span>
-        <strong>연간 4개 학기(Quarter/Term)</strong>
-    </div>
 
-</section>
-            </div>
-</div>
+    <!-- Reveal.js -->
 
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
 
-<script>
-    Reveal.initialize();
-</script>
-    
+    <script>
+        Reveal.initialize({
+            slideNumber: true,
+            transition: "slide"
+        });
+    </script>
+
 </body>
 
 </html>
